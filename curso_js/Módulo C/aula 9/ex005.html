@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(68,125,199);
+            color: white;
+            font: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id='msg'>Clique em mim</div>
+    <div name='msg2'>Segunda Mensagem</div>
+
+    <script>
+        var corpo = window.document.body;
+        var p1 = window.document.getElementsByTagName('p')[0]; //get.. vai selecionar elementos pela tag, o [0] mostra qual é o elemento que vai ser selecionado, no caso, o elemento de número 0 (o primeiro)
+        
+        /*var d = window.document.getElementById('msg'); //selecionando a div pelo ID msg
+        window.document.write('Está escrito assim: '+p1.innerText);
+        p1.style.color = 'blue'; //style vai mudar o estilo do elemento selecionado.
+        corpo.style.background = 'purple';
+        document.write(p1.innerText) //o innerText vai puxar o texto sem formatação. Se quiser com a formatação, usa-se o innerHTML
+        d.style.background = 'pink';
+        d.innerText = 'Estou aguardando...'
+        */
+
+        var ms = window.document.getElementsByName('msg2')[0]; //selecionando a var de name msg2, as chaves servem para indicar qual é o elemento que vai ser selecionado. Só é necessário utilizar as chaves, quando o getElements estiver no plural.
+        ms.innerText = 'Oier!';
+
+        var d2 = window.document.querySelector('div#msg'); //utilizando o querySelector, deve usar a sintaxe do CSS. pai.elemento para classe, pai#elemento para id
+        d2.style.background = 'black';
+
+    </script>
+</body>
+</html>

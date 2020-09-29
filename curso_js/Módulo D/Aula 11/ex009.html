@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulado</title>
+</head>
+<body>
+    <h1>Verificador de Nacionalidade</h1>
+    Digite seu país: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Enviar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    
+    <script>
+        function verificar(){
+            var pais = document.querySelector('input#txtpais')
+            var res = document.querySelector('div#res')
+            var val = (txtpais.value) //val está recebendo o valor contido em txtpais
+
+            res.innerHTML = `<p>Seu país é <strong>${val}</strong>.</p>`
+            
+            if(val == 'Brasil' || val == 'brasil'){
+                res.innerHTML += `<p>Você é Brasileiro</p>`
+            } else {
+                res.innerHTML += `<p>Você é estrangeiro</p>`
+            }
+        }
+
+    </script>
+</body>
+</html>

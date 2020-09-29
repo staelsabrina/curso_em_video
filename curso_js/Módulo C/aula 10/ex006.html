@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 20pt Arial;
+            background: rgba(42,139,42);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="area"> <!--onclick é um evento HTML, que no caso, vai chamar uma função javascrip de nome Clicar()-->
+        Interaja...
+    </div>
+
+    <script>
+        var area1 = window.document.getElementById('area'); //este objeto area1 faz a ligação com o objeto com ID area dentro do HTML
+        //esta não é uma boa prática
+        area1.addEventListener('click', clicar); //Ao invés de utilizar os comandos no html, pode-se utilizar o addEventoListener, para "ouvir" os eventos e disparar as functions correspondentes.
+        area1.addEventListener('mouseenter', entrar);
+        area1.addEventListener('mouseout', sair);
+
+        function clicar(){ //função JS com bloco de comandos que serão executados quando a função for chamada.
+            area1.innerText = 'Clicou';
+            area1.style.background = 'red';
+        }
+
+        function entrar(){
+            area1.innerText = 'Entrou!';
+        }
+
+        function sair(){
+            area1.innerText = 'Saiu...';
+            area1.style.background = 'green';
+        }
+    </script>
+    
+</body>
+</html>

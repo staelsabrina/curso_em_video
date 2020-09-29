@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 6 - Exercício 1</title>
+    <style>
+        body {
+        background-color:rgb(54, 147, 184);
+        color: white;
+        font: normal 18pt Arial;
+        }
+        h1 {
+            color:rgb(3, 44, 31);
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição!</p>
+
+    <script>
+        //Atribuição simples
+        var a = 5 + 3;
+        var b = a % 5;
+        var c = 5* b ** 2;
+        var d = 10 - a / 2;
+        var e = 6 * 2 / d;
+        var f = b % e + 4 / e;
+        document.write(`As atruibuições das variáveis ficaram:<br>a = ${a}<br>b = ${b}<br>c = ${c}<br>d = ${d}<br>e = ${e}<br>f = ${f}<br>`);
+
+        //Auto-atribuição
+        var n = 3
+        n = n + 4
+        n = n - 5
+        n = n * 4
+        n = n / 2
+        n = n ** 2
+        n = n%5
+        document.write(`<br>O resultado final das auto-atribuições foi ${n}.<br>`)
+    </script>
+</body>
+</html>
