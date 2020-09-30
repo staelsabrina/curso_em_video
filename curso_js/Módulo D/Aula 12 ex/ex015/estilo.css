@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'poetsen';
+    src: url('font/poetsen.ttf')
+}
+@font-face {
+    font-family: 'modernline';
+    src: url('font/modernline.otf');
+}
+
+body {
+    background: rgb(133, 159, 209);
+    font: normal 15pt Arial;
+    background-image: url('img/background.jpeg');
+    background-size: 100%;
+    background-size: cover;
+    
+}
+
+h1 {
+    margin: 15px;
+}
+
+header {
+    color: white;
+    text-align: center;
+    font-family: 'poetsen';
+    
+}
+
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 400px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#botao {
+    background: rgb(110, 144, 207);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: 'poetsen';
+    color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.603);
+}
+
+#ins {
+    font-size: 12pt;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+footer a:hover {
+    color: purple;
+    font-weight: bolder;
+}
+
+footer strong#name {
+    font-family: 'modernline';
+}
