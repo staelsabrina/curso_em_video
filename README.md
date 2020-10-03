@@ -1,6 +1,6 @@
 Repositório com os exercícios e projetos realizados durante os cursos ministrados pelo professor Gustavo Guanabara. 
 
-Site <a href=http://www.cursoemvideo.com.br">Curso Em Video</a>
+Site <a href="http://www.cursoemvideo.com.br">Curso Em Video</a>
 
 Projetos dos cursos: 
 
