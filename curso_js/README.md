@@ -1,3 +1,6 @@
+<h1>Conteúdo das aulas:</h1>
+
+
 Aula 4 do curso de JS do Curso em Video. Professor Gustavo Guanabara.
 
 Nesta aula foram ensinados os comandos:
@@ -87,7 +90,7 @@ n.toFixed(2).replace('.', ','). a variável n vai ficar com duas casas decimais 
 
 Para exibir o número em valores monetários, localizado no Brasil, pode-se utilizar o seguinte comando:
 
-n.toLocaleString('pt-BR', {style: 'courency', courency:'BRL'}). //Isso é, n convertido em uma string localizada em pt-BR, com estilo courency(que é valor monetário), com o valor monetário em BRL (que é o R$). Se quiser utilizar em Dolar, por exemplo, basta mudar BRL para USD ou qualquer outra unidade monetária. 
+n.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'}). //Isso é, n convertido em uma string localizada em pt-BR, com estilo courency(que é valor monetário), com o valor monetário em BRL (que é o R$). Se quiser utilizar em Dolar, por exemplo, basta mudar BRL para USD ou qualquer outra unidade monetária. 
 
 -------------------------------------------------------
 
@@ -206,6 +209,208 @@ teste ? true : false
 
 
 -------------------------------------------------------
+Aula 9 - Você sabe o que significa a sigla DOM? Sabe para que serve o Document Object Model? Sabe como criar uma árvore DOM para o seu site? Sabe como usar o JavaScript para manipular o DOM? Sabe para que servem os elementos Parent e Child em um DOM? Sabe utilizar os métodos getElementByTagName, getElementById, getElementByName, getElementByClassName, querySelector de acesso ao DOM no JavaScript?
 
-Aula 9
+-------------
 
+DOM é um acrônimo para Document Object Model. É um conjunto de objetos dentro do navegador que vai dar acesso aos componentes internos do website. 
+
+Árvore DOM começa da raiz, chamada de window. Tudo dentro do Javascript está dentro de um objeto chamado window. 
+Dentro do window tem vários outros objetos, como por exemplo a location, o document e o history. Existem muitos outros objetos.
+Dentro de document existe o objeto html, que por sua vez, contém os objetos head e body (filhos/child de html).
+Dentro de head há vários outros objtos, e por assim vai.
+
+Os elementos do DOM podem ser acessados por:
+* Marca - pode selecionar vários elementos ao mesmo tempo.
+    getElementsByTagName()
+* ID
+    getElementById()
+* Nome
+    getElentsByName()
+* Classe
+    getElementsByClassName()
+* Seletor
+    querySelector()
+    querySelectorAll()
+
+
+-------------------------------------------------------
+
+Aula 10 - Eventos são tudo que pode acontecer com um elemento. Por exemplo, eventos de mouse.
+
+ex:
+mouseenter: o mouse entrou na div
+mousemove: o mouse se move pela div
+mousedown: mouse clicou
+mouseup: soltou o click
+click: aperta e solta rapidamente o click
+mouseout: o mouse saiu da div
+
+Existem vários outros eventos.
+
+Aqui pode-se encontrar todos os eventos em JS:
+http://developer.mozilla.org/pt-BR/docs/Web/Events
+
+Uma função em JS é um conjunto de códigos que vão ser executadas somente quando um determinado evento ocorrer.
+
+ex:
+function ação(parametros){
+    bloco de código
+}
+
+-------------------------------------------------------
+
+Aula 11 - Condições em JS
+
+if (condição){ //condição simples
+    true
+}
+
+if (condição) { //condição composta
+    true
+} else {
+    false
+}
+
+
+-------------------------------------------------------
+
+Aula 12 - Condições Aninhadas:
+
+Fazer uma condição dentro de outra com elseif:
+
+if (condição1){
+    bloco1
+} else {
+    
+    if(condição2){
+        bloco2
+    } else {
+        bloco3
+    }
+
+}
+
+
+Condição Multipla:
+
+switch(expressão){ //a inclusão do break é obrigatória em todos os casos!!!
+    case valor1:
+        bloco1
+        break    
+    case valor2:
+        bloco2
+        break
+    case valor3:
+        bloco3
+        break
+
+    etc..
+
+    default:
+        blocoDefault
+        break
+}
+
+O switch só funciona com números inteiros e strings. O break dentro de cada case é obrigatório. O uso do break dentro do defaul não é obrigatório, mas é bom usar.
+
+
+-------------------------------------------------------
+
+Aula 13 - While
+
+-------------------------------------------------------
+
+Aula 14 - For - estrutura de repetição com variável de controle.
+
+-------------------------------------------------------
+
+Aula 15 - Variáveis Compostas
+
+Variáveis compostas são capazes de armazenar vários valores em uma mesma estrutura, sem perder os valores atribuidos anteriormente. São chamadas de 'arrays' (ou 'vetor' em pt-br)
+
+Declaração de uma variável composta:
+ex variável vazia: var vaga = [] 
+ex declaração com valores: var vaga = [1,5,0]
+
+Cada elemento(espaço) dentro do array possui um índice (chave/key) que começa em 0. O que tem dentro de cada elemento é o conteúde (ou valor).
+
+Um array é uma variável que tem vários elementos, cada elemento é composto por seu valor e sua chave de identificação.
+    ex.: 
+    let num = [5,8,4] 
+
+Para adicionar elementos, basta colocar o valor do índice vazio entre colchetes. 
+    ex: 
+    let num = [5,8,4] 
+    num[3] = 6
+
+    resultado = [5,8,4,6]
+
+Ou utilizar o método push()
+    ex:
+    let num = [5,8,4] 
+    num[3] = 6
+    num.push(7)  //este método vai colocar o novo valor no fim do array, ou seja, na próxima posição vazia.
+
+    resultado = [5,8,4,6,7]
+
+Para saber o tamanho do array, basta utilizar o atributo length
+    ex.:
+    num.length //como o length não é um método, mas sim um atributo, não se deve colocar () final.
+
+Para colocar os elementos em ordem crescente, basta utilizar o método sort.
+    ex.:
+    num.sort()
+
+Para percorrer o array, pode-se utilizar os laços de repetição while, do-while, for ou for-in
+
+Utilizando o for:
+    for(let pos = 0; pos < num.length; pos++) {
+        console.log(num[pos])
+    }
+
+utilizando o for-in:
+    for(let pos in num){
+        console.log(num[pos])
+    }
+    //Lê-se 'para cada posição em num, mostre o num[pos]
+
+
+Para buscar valores dentro de um vetor, utiliza-se o método indexOf(). Vai retornar a CHAVE ONDE O VALOR SE ENCONTRA. Caso não encontre o valor buscado, vai retornar o índice -1, significa que não existe.
+    ex.: 
+    let num = [5,8,4,6,7] 
+    num.indexOf(7)
+    resultado: 4 //pois o valor 7 está na posição 4
+
+-------------------------------------------------------
+
+Aula 16 - Funções
+
+Toda função pode conter uma chamada, um conjunto de parâmetro, uma ação e um retorno.
+
+São ações executadas assim que são chamadas ou em decorrência de algum evento.
+Pode receber parâmetros e retornar um resultado.
+
+ex.:
+
+function parimp(n){
+    if(n%2==0){
+        return 'par'
+    } else {
+        return 'impar'
+    }
+}
+
+let res = parimp(11)
+
+-------------------------------------------------------
+
+Aula 17 - Objetos.
+Para declarar um objeto, é necessário atribuir uma variável com chaves. Ex: 
+let amigo = {nome:'José', genero:'M', peso:'85.4', engordar(p){}}
+
+"nome", "genero" e "peso" no exemplo acima é o identificador literal. A grande diferença para o array é que no primeiro, o identificador é sempre numérico (0, 1, 2.. etc), e no objeto o identificador pode ser literal.
+
+O nome desse identificador literal é ATRIBUTO.
+
+Outra grande vantagem é que os objetos podem guardar funcionalidades (como no exemplo acima, a função engordar(p){}), é o que se chama de MÉTODO
