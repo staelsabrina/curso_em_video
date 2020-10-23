@@ -4,4 +4,4 @@ Neste exercício foi feito um site que verifica a hora do sistema e informa se e
 
 Foram utilizados HTML, CSS para as folhas de estilo e JavaScript puro para implementar o verificador.
 
-<a href="https://staelsabrina.github.io/curso_em_video/curso_js/Módulo D/Aula 12 ex/ex014/index.html">Página do Projeto</a>
+<a href="https://staelsabrina.github.io/curso_em_video/curso_js/ModuloD/Aula%2012%20ex/ex014/index.html">Página do Projeto</a>
